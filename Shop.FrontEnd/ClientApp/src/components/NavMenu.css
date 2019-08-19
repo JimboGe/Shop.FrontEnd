@@ -19,6 +19,7 @@
 .navbar.bot{
     background:rgba(0, 0, 0, 0.89);
     max-height: 60px;
+    height: 60px;
 }
 
 .navbar.bot, .navbar.bot a, .navbar.bot a:hover, .navbar.bot a:focus{
@@ -87,3 +88,47 @@ input.form-control:active, input.form-control:focus{
      color:#f08c01;
      transition-duration: 400ms;
 }
+
+.container.dropdown{
+    background:white;
+    box-shadow: 0 3px 5px rgba(0,0,0,.2);
+    position: absolute;
+    margin-left:-120px;
+    margin-top:8px;
+    height: 0px;
+    width:700px;
+    transition-duration: 400ms;
+    /* display:none; */
+}
+
+ .container.dropdown:hover{
+    height: 250px;
+    display:block;
+} 
+.container.dropdown {
+    font-size:16px;
+    padding:25px;
+    padding-top:0;
+}
+.container.dropdown a{
+    color:black;
+    text-decoration: none;
+    transition-duration: 400ms;
+}
+
+.container.dropdown .row{
+   padding-left:30px;
+}
+
+ .container.dropdown a:hover, .container.dropdown .droplist li:hover{
+    color:#f08c01;
+} 
+
+.container.dropdown .droplist a li{
+    font-size:13px;
+    padding-top:3px;
+    margin-left:18px; 
+    color:rgb(97, 97, 97);
+    transition-duration: 400ms;
+}
+

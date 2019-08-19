@@ -7,7 +7,7 @@ export class Footer extends Component {
 
   render() {
     return (
-      <div style={{ width: '100%', borderRadius: '0' }} className='navbar'>
+      <div style={{ width: '100%', borderRadius: '0' }} >
           
       </div>
     );
