@@ -2,10 +2,13 @@
 import { Link } from 'react-router-dom';
 import { Glyphicon, Nav, Navbar, NavItem, Col, Row, Carousel, Form, FormControl, Dropdown } from "react-bootstrap";
 import './NavMenu.css';
-import 'font-awesome/css/font-awesome.min.css';
 
 export class NavMenu extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {content: ''};
+    }
+  
   dropItemMan() {
     return (
       <div className='container dropdown'>
@@ -234,6 +237,13 @@ export class NavMenu extends Component {
       </div>
     );
   }
+  setDropItem(name){
+    if(name == 'Man')this.setState({content: this.dropItemMan()});
+    if(name == 'Woman')this.setState({content: this.dropItemWoman()});
+}
+ test(){
+   alert('a');
+ }
   render() {
     return (
       <div style={{ width: '100%' }}>
@@ -268,12 +278,11 @@ export class NavMenu extends Component {
               <Link to="/" className='navbar-brand'>Shop4You</Link>
               <ul className="nav">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/man">Чоловіче</Link>
-                  {/* {this.dropItemMan()} */}
+                  <Link className="nav-link" to="/man" onMouseEnter={()=>this.setDropItem('Man')} >Чоловіче</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/woman">Жіноче</Link>
-                  {this.dropItemWoman()}
+                  <Link className="nav-link" to="/woman" onMouseEnter={()=>this.setDropItem('Woman')}>Жіноче</Link>
+                  { this.state.content }
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/backpacks">Рюкзаки</Link>
