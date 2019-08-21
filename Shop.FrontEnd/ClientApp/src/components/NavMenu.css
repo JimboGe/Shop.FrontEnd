@@ -8,7 +8,7 @@
 .navbar.bot{
     margin-bottom:0px;
 }
-.navbar.top a, .navbar.top a:hover{
+.navbar.top a{
     color:#686868;
     transition-duration: 400ms;
     text-decoration: none;
@@ -26,7 +26,7 @@
     color:#f1f1f1;
     transition-duration: 400ms;
 }
-.navbar.bot .nav>li>a:focus, .navbar.bot .nav>li>a:hover, .fa-shopping-cart:hover, .login-logo:hover{
+.navbar.bot .nav>li>a:focus, .navbar.bot .nav>li>a:hover, .fa-shopping-cart:hover{
     background-color: transparent;
     color:#f08c01;
     border-color:#f08c01;
@@ -67,18 +67,24 @@ a.phone{
     margin-left:5px;
     transition-duration: 400ms;
 }
-.login-logo .fa-user{
+.fa-user{
     border:2px solid #919191;
     border-radius: 50%;
     padding: 5px;
     padding-right: 7px;
     padding-left: 7px;
     margin-top:-2px;
+    color:#686868;
     transition-duration: 400ms;
 }
 .login-logo span{
     font-size:17px;
     margin-left:3px;
+}
+.navbar.top a:hover>i{
+    color:#f08c01;
+    border-color:#f08c01;
+    
 }
 input.form-control{
     margin-top:-3px;
