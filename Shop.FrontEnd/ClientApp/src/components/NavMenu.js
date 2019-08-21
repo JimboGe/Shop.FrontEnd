@@ -1,6 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Glyphicon, Nav, Navbar, NavItem, Col, Row, Carousel, Form, FormControl, Dropdown } from "react-bootstrap";
+import { Button, Form, FormControl } from "react-bootstrap";
 import styles from './NavMenu.css';
 
 class NavMenu extends Component {
@@ -9,7 +9,9 @@ class NavMenu extends Component {
     this.state = {
       content: '', 
       displayMan:false,
-      displayWoman:false
+      displayWoman:false,
+      displayCart:false,
+      contentCart: ''
     };
     }
   dropItemMan() {
@@ -255,13 +257,24 @@ class NavMenu extends Component {
       </div>
     );
   }
+  dropItemCart(){
+   return(
+      <div className='cart'>
+        <Link to='/cart'><p>1 товар (Дивитися)</p></Link>
+        <div className='price'>
+           <p>Сума <span>100 грн.</span></p>
+        </div>
+        <Link to='cart'><Button className='btn-cart'>Оформить заказ</Button></Link>
+      </div>
+   );
+  }
   setDropItem(name){
     if(name == 'Man'){
       this.setState({content: this.dropItemMan(), displayMan: true, displayWoman:false});
     }
     if(name == 'Woman')
     {
-      this.setState({content: this.dropItemWoman(),displayMan: false, displayWoman:true});
+      this.setState({content: this.dropItemWoman(), displayMan: false, displayWoman:true});
     }
     if(name == 'none'){
       this.setState({content:'',displayMan: false, displayWoman:false});
@@ -283,9 +296,11 @@ class NavMenu extends Component {
                 <Link to='/services' className='services'> Доставка, оплата, повернення</Link>
               </div>
               <div style={{ float: 'right' }}>
-                <Link to='/cart'>
+                <Link to='/cart' onMouseEnter={()=>this.setState({displayCart:true,contentCart:this.dropItemCart()})} 
+                      onMouseLeave={()=>this.setState({displayCart:false, contentCart:''})}>
                   <i className="fa fa-shopping-cart" style={{ fontSize: '18px' }}></i>
                 </Link>
+                {this.state.displayCart && this.state.contentCart}
                 <Link to='/user/login' className='login-logo' >
                     <i className="fa fa-user" style={{ fontSize: '18px' }}></i>
                     <span>Вхід</span>

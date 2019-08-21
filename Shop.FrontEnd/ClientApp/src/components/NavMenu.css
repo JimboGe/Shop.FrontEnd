@@ -134,6 +134,64 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     width:700px;
     min-height: 250px;
 }
-
+.navbar.top .cart{
+    position: absolute;
+    margin-top:10px;
+    z-index:5;
+    width:220px;
+    background: #ff9601;
+    margin-left:-180px;
+    box-shadow: 0 3px 5px rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+.navbar.top .cart p{
+    font-size: 13px;
+}
+.navbar.top .cart a p{
+    border-bottom: 1px solid white;
+    padding: 15px 0px 15px 0px;
+    color:white;
+    text-align: center; 
+}
+.navbar.top .cart a p:hover{
+    color:white;
+}
+.navbar.top .cart .price{
+    color:black;
+    background: white;
+    margin:0px 25px 0px 25px;
+    margin-bottom:25px;
+    height: 40px;
+   
+}
+.navbar.top .cart .price p{
+    padding-left:15px;
+    padding-top:10px;
+    font-size:15px;
+    margin-top:30px;
+}
+.navbar.top .cart .price p span{
+    float: right;
+    padding-right: 10px;
+    padding-top:1px;
+    font-size:14px;
+}
+.btn.btn-cart{
+    background: rgb(255, 136, 0);
+    border:0;
+    border-radius: 20px;
+    color:rgb(255, 255, 255);
+    font-size:14px;
+    float:right;
+    margin-top:-5px;
+    margin-bottom:15px;
+    margin-right:25px;
+    transition-duration: 400ms;
+    box-shadow: 2px 3px 5px rgba(97, 97, 97, 0.2);
+}
+.btn.btn-cart:hover{
+    color:white;
+    background: #ff9601;
+}
 
 
