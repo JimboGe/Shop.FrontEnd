@@ -105,7 +105,6 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
 }
 .container.dropdown {
     font-size:16px;
-    padding:25px;
 }
 .container.dropdown a{
     color:black;
@@ -125,15 +124,22 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     color:rgb(97, 97, 97);
     transition-duration: 400ms;
 }
-.container.dropdown  {
+.container.dropdown{
     background:white;
     box-shadow: 0 3px 5px rgba(0,0,0,.2);
     position: absolute;
     margin-left:-135px;
     margin-top:8px;
     width:700px;
-    min-height: 250px;
     z-index: 5;
+    max-height: 0px;
+    overflow: hidden;
+}
+.dropdownmenu:hover .dropdown{
+    padding:25px;
+    max-height: 1000px;
+    transition-duration: 1s;
+    transition-delay: 400ms;
 }
 .navbar.top .cart{
     position: absolute;
@@ -143,9 +149,14 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     margin-left:-180px;
     box-shadow: 0 3px 5px rgba(0,0,0,.2);
     border-radius: 5px;
-    transition-duration: 400ms;
+    max-height: 0px;
+    overflow: hidden;
+    transition-duration: 500ms;
+    transition-delay: 400ms;
 }
-
+#cart:hover .cart{
+    max-height: 165px;
+}
 .navbar.top .cart p{
     font-size: 13px;
 }
