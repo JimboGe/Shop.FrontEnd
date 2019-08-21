@@ -258,13 +258,14 @@ class NavMenu extends Component {
     );
   }
   dropItemCart(){
+    
    return(
       <div className='cart'>
         <Link to='/cart'><p>1 товар (Дивитися)</p></Link>
         <div className='price'>
            <p>Сума <span>100 грн.</span></p>
         </div>
-        <Link to='cart'><Button className='btn-cart'>Оформить заказ</Button></Link>
+        <Link to='/cart'><Button className='btn-cart'>Оформить заказ</Button></Link>
       </div>
    );
   }
@@ -295,12 +296,12 @@ class NavMenu extends Component {
               <div style={{ float: 'left', marginLeft: '1%', paddingTop: '1px', marginTop: '3.5px' }}>
                 <Link to='/services' className='services'> Доставка, оплата, повернення</Link>
               </div>
-              <div style={{ float: 'right' }}>
+              <div style={{ float: 'right'}}>
                 <Link to='/cart' onMouseEnter={()=>this.setState({displayCart:true,contentCart:this.dropItemCart()})} 
-                      onMouseLeave={()=>this.setState({displayCart:false, contentCart:''})}>
+                onMouseLeave={()=>this.setState({displayCart:false,contentCart:''})}>
                   <i className="fa fa-shopping-cart" style={{ fontSize: '18px' }}></i>
+                  {this.state.displayCart && this.state.contentCart}
                 </Link>
-                {this.state.displayCart && this.state.contentCart}
                 <Link to='/user/login' className='login-logo' >
                     <i className="fa fa-user" style={{ fontSize: '18px' }}></i>
                     <span>Вхід</span>
