@@ -14,7 +14,7 @@ class NavMenu extends Component {
     }
   dropItemMan() {
     return (
-      <div className='container dropdown' style={{marginTop:'0px',marginLeft:'-33px'}}>
+      <div className='container dropdown' style={{marginTop:'0px',marginLeft:'-27px'}}>
         <div className="row">
           <div className="col-sm">
             <ul className='droplist'>
