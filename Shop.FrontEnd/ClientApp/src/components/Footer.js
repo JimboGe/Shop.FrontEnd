@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Glyphicon, Nav, Navbar, NavItem, Col, Row, Carousel } from "react-bootstrap";
 import './Footer.css';
 
-export class Footer extends Component {
+class Footer extends Component {
 
   render() {
     return (
@@ -92,3 +92,4 @@ export class Footer extends Component {
     );
   }
 }
+export default Footer;

@@ -1,17 +1,20 @@
 ﻿import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Glyphicon, Nav, Navbar, NavItem, Col, Row, Carousel, Form, FormControl, Dropdown } from "react-bootstrap";
-import './NavMenu.css';
+import styles from './NavMenu.css';
 
-export class NavMenu extends Component {
+class NavMenu extends Component {
   constructor(props) {
     super(props);
-    this.state = {content: ''};
+    this.state = {
+      content: '', 
+      displayMan:false,
+      displayWoman:false
+    };
     }
-  
   dropItemMan() {
     return (
-      <div className='container dropdown'>
+      <div className='container dropdown' style={{marginTop:'0px',marginLeft:'-33px'}}>
         <div className="row">
           <div className="col-sm">
             <ul className='droplist'>
@@ -55,15 +58,15 @@ export class NavMenu extends Component {
               </Link>
               <Link to='#'>
                 <li>
-                  Куртки
+                  Куртки, анораки
                 </li>
               </Link>
               <Link to='#'>
                 <li>
                   Світшоти, толстовки
                 </li>
-              </Link>
-            </ul>
+              </Link> 
+          </ul>
           </div>
           <div className="col-sm">
             <ul className='droplist'>
@@ -85,6 +88,13 @@ export class NavMenu extends Component {
                   Сумки на плече
                 </li>
               </Link>
+              <Link to='#' >
+                <p style={{marginTop:'20px'}}>БЕЙСБОЛКИ</p>
+              </Link> 
+               <Link to='#'>
+               <p style={{marginTop:'15px'}}>ШКАРПЕТКИ</p>
+              </Link>
+             
             </ul>
           </div>
           <div className="col-sm">
@@ -125,7 +135,7 @@ export class NavMenu extends Component {
   }
   dropItemWoman() {
     return (
-      <div className='container dropdown'>
+      <div className='container dropdown'style={{marginTop:'0px'}}>
         <div className="row">
           <div className="col-sm">
             <ul className='droplist'>
@@ -177,6 +187,11 @@ export class NavMenu extends Component {
                   Комбінезони
               </li>
               </Link>
+              <Link to='#'>
+                <li>
+                  Куртки
+              </li>
+              </Link>
             </ul>
           </div>
           <div className="col-sm">
@@ -199,6 +214,9 @@ export class NavMenu extends Component {
                   Сумки на плече
               </li>
               </Link>
+              <Link to='#' >
+                <p style={{marginTop:'20px'}}>ШКАРПЕТКИ</p>
+              </Link> 
             </ul>
           </div>
           <div className="col-sm">
@@ -238,12 +256,17 @@ export class NavMenu extends Component {
     );
   }
   setDropItem(name){
-    if(name == 'Man')this.setState({content: this.dropItemMan()});
-    if(name == 'Woman')this.setState({content: this.dropItemWoman()});
+    if(name == 'Man'){
+      this.setState({content: this.dropItemMan(), displayMan: true, displayWoman:false});
+    }
+    if(name == 'Woman')
+    {
+      this.setState({content: this.dropItemWoman(),displayMan: false, displayWoman:true});
+    }
+    if(name == 'none'){
+      this.setState({content:'',displayMan: false, displayWoman:false});
+    }
 }
- test(){
-   alert('a');
- }
   render() {
     return (
       <div style={{ width: '100%' }}>
@@ -253,7 +276,7 @@ export class NavMenu extends Component {
               <div style={{ float: 'left', marginTop: '3.5px' }}>
                 <i className="fa fa-phone" style={{ fontSize: '25px', color: '#919191' }}></i>
               </div>
-              <div style={{ float: 'left', marginLeft: '0.7%', marginTop: '3.5px' }}>
+              <div style={{ float: 'left', marginLeft: '0.7%', marginTop: '3.5px' }} className='phone'>
                 <a href="#" className='phone'>+38 (096) 787 27 81</a>
               </div>
               <div style={{ float: 'left', marginLeft: '1%', paddingTop: '1px', marginTop: '3.5px' }}>
@@ -262,6 +285,10 @@ export class NavMenu extends Component {
               <div style={{ float: 'right' }}>
                 <Link to='/cart'>
                   <i className="fa fa-shopping-cart" style={{ fontSize: '18px' }}></i>
+                </Link>
+                <Link to='/user/login' className='login-logo' >
+                    <i className="fa fa-user" style={{ fontSize: '18px' }}></i>
+                    <span>Вхід</span>
                 </Link>
               </div>
               <div style={{ float: 'right' }}>
@@ -275,14 +302,19 @@ export class NavMenu extends Component {
         <div style={{ borderRadius: '0' }} className='navbar bot'>
           <nav>
             <div className='container'>
-              <Link to="/" className='navbar-brand'>Shop4You</Link>
               <ul className="nav">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/man" onMouseEnter={()=>this.setDropItem('Man')} >Чоловіче</Link>
+                <li className="nav-item" onMouseEnter={()=>this.setDropItem('Man')} onMouseLeave={()=>this.setDropItem('none')}>
+                  <Link className="nav-link" to="/man">Чоловіче
+                  </Link>
+                    { this.state.displayMan &&
+                      this.state.content
+                    }
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/woman" onMouseEnter={()=>this.setDropItem('Woman')}>Жіноче</Link>
-                  { this.state.content }
+                <li className="nav-item" onMouseEnter={()=>this.setDropItem('Woman')} onMouseLeave={()=>this.setDropItem('none')}>
+                  <Link className="nav-link" to="/woman">Жіноче</Link>
+                    { this.state.displayWoman &&
+                      this.state.content
+                    }
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/backpacks">Рюкзаки</Link>
@@ -304,3 +336,4 @@ export class NavMenu extends Component {
     );
   }
 }
+export default NavMenu;
