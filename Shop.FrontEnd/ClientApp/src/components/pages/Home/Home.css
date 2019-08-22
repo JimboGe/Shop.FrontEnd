@@ -1,0 +1,42 @@
+
+.carousel.big button.left , .carousel.big button.right{
+    height: 420px;
+    background:transparent;
+    width:100px;
+    border:0px;
+}
+.carousel.small button.left , .carousel.small button.right{
+    height: 200px;
+    background:transparent;
+    width:50px;
+    border:0px;
+}
+.carousel button.left:active,.carousel button.left:focus,
+.carousel button.right:focus, .carousel button.right:active{
+    outline: 0px;
+}
+.carousel img{
+    width:100%;
+}
+.grid {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 0.9fr 0.9fr;
+    grid-template-areas: 
+        "a a a a b b"
+        "a a a a b b"
+        "a a a a c c"
+        "a a a a c c";
+    
+  }
+.item1 {
+    grid-area: a;
+    margin:25px 25px 25px 0px;
+}
+.item2 {
+    grid-area: b;
+    margin-top:25px;
+}
+.item3 {
+    margin-top:17px;
+    grid-area: c;
+}
