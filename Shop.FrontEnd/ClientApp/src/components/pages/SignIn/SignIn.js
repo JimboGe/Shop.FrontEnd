@@ -10,30 +10,30 @@ class SignIn extends Component {
     }
     render() {
         return (
-            <div className='container'>
+            <div className='container sign'>
                 <Row>
-                    <Col md={6}>
-                        <div className='signin left'>
-                            <h2>Увійти</h2>
+                    <Col xs={12} md={6}>
+                        <div className='signin box'>
+                            <h4>УВІЙТИ</h4>
                             <p>
-                                Якщо ви вже зареєстровані на shop4u.com.ua, введіть ваш email та пароль для входу.
+                                Увійти в Особистий Кабінет
                             </p>
                             <div className="form-group">
-                                <label >Email address</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ваш Email" />
+                                <label>E-MAIL</label>
+                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail" />
                             </div>
                             <div className="form-group">
-                                <label >Пароль</label>
-                                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                <label>ПАРОЛЬ</label>
+                                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Пароль" />
                             </div>
-                            <button type="submit" className="btn btn-dark">Увійти</button>
+                            <button type="submit" className="btn btn-dark">УВІЙТИ</button>
                         </div>
                     </Col>
-                    <Col md={6}>
-                        <div className='signin right'>
-                            <h2>Ще не зареєстровані?</h2>
+                    <Col xs={12} md={6}>
+                        <div className='signin box'>
+                            <h4>НОВИЙ КЛІЄНТ</h4>
                             <p>Якщо ви ще не реєструвалися на нашому сайті, натисніть кнопку "Зареєструватися".</p>
-                           <Link to='/user/signup'><button className="btn btn-dark">Зареєструватися</button></Link> 
+                           <Link to='/user/signup'><button className="btn btn-dark">РЕЄСТРАЦІЯ</button></Link> 
                         </div>
                     </Col>
                 </Row>
