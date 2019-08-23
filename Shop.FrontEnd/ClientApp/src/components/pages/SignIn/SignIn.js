@@ -16,7 +16,7 @@ class SignIn extends Component {
                         <div className='signin left'>
                             <h2>Увійти</h2>
                             <p>
-                                Якщо ви вже зареєстровані на shop4u.com.ua, введіть ваші email та пароль для входу.
+                                Якщо ви вже зареєстровані на shop4u.com.ua, введіть ваш email та пароль для входу.
                             </p>
                             <div className="form-group">
                                 <label >Email address</label>

@@ -1,6 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, FormControl } from "react-bootstrap";
+import { Button, Form, FormControl, Row, Col } from "react-bootstrap";
 import styles from './NavMenu.css';
 
 class NavMenu extends Component {
@@ -282,16 +282,48 @@ class NavMenu extends Component {
                   <i className="fa fa-shopping-cart" style={{ fontSize: '18px' }}></i>
                   {this.dropItemCart()}
                 </Link>
-                <Link to='/user/signin' className='login-logo' >
-                  <i className="fa fa-user" style={{ fontSize: '18px' }}></i>
-                  <span>Вхід</span>
-                </Link>
               </div>
               <div style={{ float: 'right' }}>
                 <Form inline>
                   <FormControl type="text" placeholder="Пошук..." />
                 </Form>
               </div>
+            </div>
+          </nav>
+        </div>
+        <div style={{ borderRadius: '0' }} className='navbar middle'>
+          <nav>
+            <div className='container' >
+              <Row>
+                <Col md={8}>
+                  <div className='logo'>
+                    <Link to='/'>
+                      <img src='/img/logo.png' height='70px' />
+                      <div>
+                        <span>
+                          The clothest, that live your life.
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                </Col>
+                <Col md={4}>
+                  <div className='right'>
+                    <Link to='/cart'>
+                      <i className="fa fa-shopping-cart"></i>
+                      <span>КОРЗИНА</span>
+                    </Link>
+                    <Link to='/user/signin'>
+                      <i className="fa fa-user"></i>
+                      <span>УВІЙТИ</span>
+                    </Link>
+                    <Link to='/user/signup'>
+                    <i class="fa fa-user-plus"></i>
+                      <span>ЗАРЕЄСТРУВАТИСЯ</span>
+                    </Link>
+                  </div>
+                </Col>
+              </Row>
             </div>
           </nav>
         </div>
