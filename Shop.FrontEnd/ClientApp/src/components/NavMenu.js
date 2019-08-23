@@ -282,7 +282,7 @@ class NavMenu extends Component {
                   <i className="fa fa-shopping-cart" style={{ fontSize: '18px' }}></i>
                   {this.dropItemCart()}
                 </Link>
-                <Link to='/user/login' className='login-logo' >
+                <Link to='/user/signin' className='login-logo' >
                   <i className="fa fa-user" style={{ fontSize: '18px' }}></i>
                   <span>Вхід</span>
                 </Link>

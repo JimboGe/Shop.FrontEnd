@@ -1,0 +1,24 @@
+.signup{
+    text-align: left;
+    margin:25px 42% 25px 8%;
+   
+}
+.signup p{
+    color: rgb(112, 112, 112);
+}
+.signup .form-group{
+    text-align: left;
+    width:60%;
+}
+.signup button{
+    width:60%;
+    border-radius: 20px;
+    margin-top:15px;
+    font-size:16px;
+    background:#2b2b2b;
+}
+.signup button:hover.btn.btn-dark,.signup button:active.btn.btn-dark,.signup button:focus.btn.btn-dark{
+    color:#f08c01;
+    outline: 0;
+    
+}

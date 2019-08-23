@@ -114,7 +114,7 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
 .container.dropdown .row{
    padding-left:30px;
 }
- .container.dropdown a:hover, .container.dropdown .droplist li:hover{
+.container.dropdown a:hover, .container.dropdown .droplist li:hover{
     color:#f08c01;
 } 
 .container.dropdown .droplist a li{
@@ -198,11 +198,12 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     margin-top:-5px;
     margin-bottom:15px;
     margin-right:25px;
-    transition-duration: 400ms;
+    transition-duration: 200ms;
     box-shadow: 2px 3px 5px rgba(97, 97, 97, 0.2);
 }
 .btn.btn-cart:hover{
-    color:white;
+    color:#f08c01;
+    text-shadow: 0 1px 0 #f08c01;
     background: black;
 }
 

@@ -1,0 +1,31 @@
+.signin{
+    margin:25px 0;
+}
+.signin p{
+    color: rgb(112, 112, 112);
+}
+.signin.left{
+    margin-left:15%;
+    margin-right: 25%;
+}
+.signin h2{
+    margin-top:30px;
+    margin-bottom: 15px;
+}
+.signin button{
+    border-radius: 20px;
+    font-size:16px;
+    margin-top:15px;
+    background:#2b2b2b;
+}
+.signin.right button{
+    width:40%;
+}
+.signin.left button{
+    width:100%;
+}
+.signin button:hover.btn.btn-dark,.signin button:active.btn.btn-dark,.signin button:focus.btn.btn-dark{
+    color:#f08c01;
+    outline: 0;
+    
+}

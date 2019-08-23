@@ -10,57 +10,6 @@ class Home extends Component {
   render() {
     return (
       <div className='container'>
-        {/* <Row>
-          <Col md={8}>
-            <div className='carousel big'>
-              <Carousel slidesToShow={1} cellAlign="center" speed={600} autoplay={true} autoplayInterval={2000}
-                wrapAround={true} pauseOnHover={true}
-                renderCenterLeftControls={({ previousSlide }) => (
-                  <button className='left' onClick={previousSlide} />
-                )}
-                renderCenterRightControls={({ nextSlide }) => (
-                  <button className='right' onClick={nextSlide} />
-                )}>
-                <Link to='#1'><img src="https://photo.yupoo.com/vans1966666666/ae014356/dcfff5ea.jpeg" /></Link>
-                <Link to='#2'><img src="https://photo.yupoo.com/vans1966666666/0add2c40/3e3fad3c.jpeg" /></Link>
-                <Link to='#3'><img src="https://photo.yupoo.com/vans1966666666/07534044/dc2fc888.jpeg" /></Link>
-              </Carousel>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className='carousel small'>
-              <Carousel slidesToShow={1} cellAlign="center" speed={600} autoplay={true} autoplayInterval={2000}
-                wrapAround={true} pauseOnHover={true}
-                renderCenterLeftControls={({ previousSlide }) => (
-                  <button className='left' onClick={previousSlide} />
-                )}
-                renderCenterRightControls={({ nextSlide }) => (
-                  <button className='right' onClick={nextSlide} />
-                )}>
-                <Link to='#1'><img src="https://photo.yupoo.com/vans1966666666/ae014356/dcfff5ea.jpeg" /></Link>
-                <Link to='#2'><img src="https://photo.yupoo.com/vans1966666666/0add2c40/3e3fad3c.jpeg" /></Link>
-                <Link to='#3'><img src="https://photo.yupoo.com/vans1966666666/07534044/dc2fc888.jpeg" /></Link>
-              </Carousel>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className='carousel small'>
-              <Carousel slidesToShow={1} cellAlign="center" speed={600} autoplay={true} autoplayInterval={2000}
-                wrapAround={true} pauseOnHover={true}
-                renderCenterLeftControls={({ previousSlide }) => (
-                  <button className='left' onClick={previousSlide} />
-                )}
-                renderCenterRightControls={({ nextSlide }) => (
-                  <button className='right' onClick={nextSlide} />
-                )}>
-                <Link to='#1'><img src="https://photo.yupoo.com/vans1966666666/ae014356/dcfff5ea.jpeg" /></Link>
-                <Link to='#2'><img src="https://photo.yupoo.com/vans1966666666/0add2c40/3e3fad3c.jpeg" /></Link>
-                <Link to='#3'><img src="https://photo.yupoo.com/vans1966666666/07534044/dc2fc888.jpeg" /></Link>
-              </Carousel>
-            </div>
-          </Col>
-        </Row> */}
-
         <div className='grid'>
           <div className='item1'>
             <div className='carousel big ' >
