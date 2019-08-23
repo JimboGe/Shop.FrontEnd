@@ -1,22 +1,58 @@
+
+.carousel.big button.left , .carousel.big button.right{
+    height: 420px;
+    background:transparent;
+    width:100px;
+    border:0px;
+}
+.carousel button.left:active,.carousel button.left:focus,
+.carousel button.right:focus, .carousel button.right:active{
+    outline: 0px;
+}
+.carousel img{
+    width:100%;
+    border-radius:6px;
+}
+.item img{
+    width:100%;
+    padding:0px;
+    transition-duration: 400ms;
+}
+.item img:hover{
+    padding:5px;
+}
+.item{
+    padding:10px 10px 10px 10px;
+    text-align: center;
+}
 .grid {
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 0.9fr 0.9fr;
+    grid-template: 0.6fr 0.5fr 0.5fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        "a a a a b b"
-        "a a a a b b"
-        "a a a a c c"
-        "a a a a c c";
-    
+        "a a a a a a a a"
+        "b b c c d d g g"
+        "e e c c h h h h";
+    margin-bottom:35px;
   }
 .item1 {
     grid-area: a;
-    margin:25px 25px 25px 0px;
+    margin-bottom:30px;
 }
 .item2 {
     grid-area: b;
-    margin-top:25px;
 }
 .item3 {
-    margin-top:17px;
+    grid-area: e;
+}
+.item4 {
     grid-area: c;
+}
+.item5 {
+    grid-area: d;
+}
+.item6 {
+    grid-area: g;
+}
+.item7 {
+    grid-area: h;
 }
