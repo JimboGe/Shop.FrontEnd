@@ -204,7 +204,7 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     transition-duration: 400ms;
 }
 .navbar.middle .right{
-    font-size:10px;
+    font-size:12px;
     float:right;
     margin-top:15px;
 }
