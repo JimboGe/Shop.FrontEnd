@@ -1,7 +1,7 @@
 .carousel.big button.left , .carousel.big button.right{
     height: 420px;
     background:transparent;
-    width:100px;
+    width:400px;
     border:0px;
 }
 .carousel button.left:active,.carousel button.left:focus,
@@ -10,7 +10,6 @@
 }
 .carousel img{
     width:100%;
-    border-radius:6px;
 }
 .item img{
     width:100%;
@@ -26,7 +25,7 @@
 }
 .grid {
     display: grid;
-    grid-template: 0.6fr 0.5fr 0.5fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template: 0.5fr 0.5fr 0.5fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "a a a a a a a a"
         "b b c c d d g g"

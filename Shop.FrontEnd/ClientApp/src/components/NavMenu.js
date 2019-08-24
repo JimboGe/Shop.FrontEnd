@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, FormControl, Row, Col } from "react-bootstrap";
-import styles from './NavMenu.css';
+import './NavMenu.css';
 
 class NavMenu extends Component {
   constructor(props) {
@@ -254,7 +254,7 @@ class NavMenu extends Component {
   dropItemCart() {
     return (
       <div className='cart'>
-        <Link to='/cart'><p>1 товар (Дивитися)</p></Link>
+        <Link to='/cart'><p>2 товара (Дивитися)</p></Link>
         <div className='price'>
           <p>Сума <span>100 грн.</span></p>
         </div>

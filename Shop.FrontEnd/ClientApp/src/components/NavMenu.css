@@ -110,7 +110,7 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
    padding-left:30px;
 }
 .container.dropdown a:hover, .container.dropdown .droplist li:hover{
-    color:#f08c01;
+    color:rgb(201, 201, 201);
 } 
 .container.dropdown .droplist a li{
     font-size:13px;
