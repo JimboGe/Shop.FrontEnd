@@ -48,8 +48,9 @@
    margin-top:1px;
 }
 .cart .result-price {
-    width:30%;
     padding:25px;
+    float:right;
+    text-align: center;
 }
 .cart .result-price span{
     font-size:22px;

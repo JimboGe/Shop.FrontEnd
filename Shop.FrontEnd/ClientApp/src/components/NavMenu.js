@@ -1,6 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, FormControl, Row, Col } from "react-bootstrap";
+import { Form, FormControl, Row, Col } from "react-bootstrap";
 import styles from './NavMenu.css';
 
 class NavMenu extends Component {
@@ -258,7 +258,7 @@ class NavMenu extends Component {
         <div className='price'>
           <p>Сума <span>100 грн.</span></p>
         </div>
-        <Link to='/cart'><Button className='btn-cart'>Оформить заказ</Button></Link>
+        <Link to='/cart'><button className='btn btn-dark'>Оформить заказ</button></Link>
       </div>
     );
   }
@@ -269,7 +269,7 @@ class NavMenu extends Component {
           <nav>
             <div className='container'>
               <div style={{ float: 'left', marginTop: '3.5px' }}>
-                <i className="fa fa-phone" style={{ fontSize: '25px', color: '#919191' }}></i>
+                <i className="fa fa-phone" style={{ fontSize: '25px'}}></i>
               </div>
               <div style={{ float: 'left', marginLeft: '0.7%', marginTop: '3.5px' }} className='phone'>
                 <a href="#" className='phone'>+38 (096) 787 27 81</a>

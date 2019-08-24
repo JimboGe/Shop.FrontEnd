@@ -8,7 +8,7 @@ class Cart extends Component {
             <div className='container cart'>
                 
                 <div className='header'>
-                    <h1>КОШИК ДЛЯ ПОКУПОК</h1>
+                    <h2>КОШИК ДЛЯ ПОКУПОК</h2>
                 </div>
                 <div>
                     <table>

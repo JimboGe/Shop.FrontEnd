@@ -5,31 +5,44 @@
     margin-bottom: 0;
     color:#919191;
 }
-.navbar.bot{
-    margin-bottom:0px;
-}
 .navbar.top a{
     color:#686868;
     transition-duration: 400ms;
     text-decoration: none;
 }
 .navbar.top a:hover{
-    color:#f08c01;
+    color:black;
+}
+.navbar.top .fa-shopping-cart:hover{
+    color:black;
+    border-color:black;
 }
 .navbar.bot{
     background:rgba(0, 0, 0, 0.89);
     max-height: 60px;
     height: 60px;
     z-index: 3;
+    margin:0;
 }
-.navbar.bot, .navbar.bot a, .navbar.bot a:hover, .navbar.bot a:focus{
+.navbar.bot a{
     color:#f1f1f1;
     transition-duration: 400ms;
+    text-decoration: none;
 }
-.navbar.bot .nav>li>a:focus, .navbar.bot .nav>li>a:hover, .navbar.top .fa-shopping-cart:hover{
-    background-color: transparent;
-    color:#f08c01;
-    border-color:#f08c01;
+.navbar.bot a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .5s;
+    margin-top:1px;
+}
+.navbar.bot a:hover::after{
+    width:100%;
+}
+.navbar.bot a:hover{
+    background: transparent;
 }
 .navbar.bot .nav>li>a{
     height: 50px;
@@ -75,13 +88,13 @@ input.form-control{
     transition-duration: 400ms;
 }
 input.form-control:active, input.form-control:focus, input.form-control:hover{
-    border-color:#f08c01;
+    border-color:black;
     box-shadow: none;
     text-shadow: none;
-    color:#f08c01;
+    color:black;
 }
 .fa-phone:hover{   
-     color:#f08c01;
+     color:black;
      transition-duration: 400ms;
 }
 .container.dropdown {
@@ -134,6 +147,7 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     overflow: hidden;
     transition-duration: 500ms;
     transition-delay: 400ms;
+    margin-top:10px;
 }
 #cart:hover .cart{
     max-height: 165px;
@@ -169,22 +183,20 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     padding-top:1px;
     font-size:14px;
 }
-.btn.btn-cart{
-    background: #2b2b2b;
-    border:0;
-    border-radius: 20px;
-    color:rgb(255, 255, 255);
+.navbar.top .cart .btn.btn-dark{
+    background: white;
+    border:2px solid black;
+    border-radius: 5px;
+    color:black;
     font-size:14px;
     float:right;
     margin-top:-5px;
     margin-bottom:15px;
     margin-right:25px;
     transition-duration: 200ms;
-    box-shadow: 2px 3px 5px rgba(97, 97, 97, 0.2);
 }
-.btn.btn-cart:hover{
-    color:#f08c01;
-    text-shadow: 0 1px 0 #f08c01;
+.navbar.top .cart .btn.btn-dark:hover{
+    color:white;
     background: black;
 }
 .navbar.middle .logo img{
@@ -208,13 +220,26 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     float:right;
     margin-top:15px;
 }
+
 .navbar.middle .right a {
+    display: inline-block;
     text-decoration: none;
 }
 .navbar.middle .right a span{
     color:rgb(128, 128, 128);
     margin-left:2px;
     transition-duration: 400ms;
+}
+.navbar.middle .right a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .5s;
+}
+.navbar.middle .right a:hover::after{
+    width:100%;
 }
 .navbar.middle .right a:not(:last-child){
     margin-right:20px;
@@ -226,5 +251,5 @@ input.form-control:active, input.form-control:focus, input.form-control:hover{
     transition-duration: 400ms;
 }
 .navbar.middle .right a:hover i, .navbar.middle .right a:hover span{
-    color: #f08c01;
+    color: black;
 }
