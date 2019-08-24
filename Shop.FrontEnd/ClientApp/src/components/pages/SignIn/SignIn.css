@@ -16,7 +16,7 @@
 .signin h4{
     margin-bottom: 20px;
 }
-.signin button, .signup button{
+.signin button, .signup button, .cart .result-price button{
     border-radius: 5px;
     font-size:15px;
     margin-top:10px;
@@ -27,7 +27,8 @@
     transition-duration: 400ms;
 }
 .signin button:hover.btn.btn-dark,.signin button:active.btn.btn-dark,.signin button:focus.btn.btn-dark,
-.signup button:hover.btn.btn-dark,.signup button:active.btn.btn-dark,.signup button:focus.btn.btn-dark{
+.signup button:hover.btn.btn-dark,.signup button:active.btn.btn-dark,.signup button:focus.btn.btn-dark,
+.cart .result-price button.btn.btn-dark:hover,.cart .result-price button.btn.btn-dark:active,.cart .result-price button.btn.btn-dark:focus {
     color:white;
     outline: 0;
     background: black;
