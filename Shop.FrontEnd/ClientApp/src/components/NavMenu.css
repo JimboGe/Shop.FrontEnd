@@ -41,12 +41,13 @@
 .navbar.bot a:hover::after{
     width:100%;
 }
-.navbar.bot a:hover{
+.navbar.bot a:hover, .navbar.bot a:focus,.navbar.bot a:active{
     background: transparent;
 }
 .navbar.bot .nav>li>a{
     height: 50px;
 }
+
 .navbar.bot li{
     margin-right: 1.5%;
 }

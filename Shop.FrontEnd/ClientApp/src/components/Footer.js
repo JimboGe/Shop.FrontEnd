@@ -4,7 +4,6 @@ import { Glyphicon, Nav, Navbar, NavItem, Col, Row, Carousel } from "react-boots
 import './Footer.css';
 
 class Footer extends Component {
-
   render() {
     return (
       <div style={{ width: '100%' }} >
@@ -13,15 +12,15 @@ class Footer extends Component {
             <div className='container'>
               <div className="row">
                 <div className="col-sm">
-                  <Link to='#' className='header'>Контакти</Link>
+                    <p>Контакти</p>
                 </div>
                 <div className="col-sm icons">
-                  <Link to='#'><i className="fa fa-telegram"></i></Link>
-                  <Link to='#'><i className="fa fa-instagram"></i></Link>
-                  <Link to='#'><i className="fa fa-facebook-f"></i></Link>
-                  <Link to='#'><i className="fa fa-youtube"></i></Link>
-                  <Link to='#'><i className="fa fa-pinterest"></i></Link>
-                  <Link to='#'><i className="fa fa-twitter"></i></Link>
+                  <a href='#'><i className="fa fa-telegram"></i></a>
+                  <a href='https://www.instagram.com/martyn__shop/'><i className="fa fa-instagram"></i></a>
+                  <a href='#'><i className="fa fa-facebook-f"></i></a>
+                  <a href='#'><i className="fa fa-youtube"></i></a>
+                  <a href='#'><i className="fa fa-pinterest"></i></a>
+                  <a href='#'><i className="fa fa-twitter"></i></a>
                 </div>
                 <div className="col-sm">
                   <p>Про нас</p>
@@ -32,15 +31,15 @@ class Footer extends Component {
                   <ul>
                     <li className='content'>
                        <i className="fa fa-phone"></i>
-                       <Link to='#' >+38 (096) 787 27 81 </Link>
+                       <a href='#' >+38 (096) 787 27 81 </a>
                     </li>
                     <li className='content'>
                       <i className="fa fa-envelope"></i>
-                      <Link to='#' >shop4you@gmail.com </Link>
+                      <a href='#' >shop4you@gmail.com </a>
                     </li>
                     <li className='content'>
                       <i className="fa fa-instagram"></i>
-                      <Link to='https://www.instagram.com/martyn__shop/' >instagram.com/martyn__shop/ </Link>
+                      <a href='https://www.instagram.com/martyn__shop/' >instagram.com/martyn__shop/ </a>
                     </li>
                   </ul>
                 </div>

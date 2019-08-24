@@ -14,7 +14,7 @@
     padding-right:50%;
 }
 .footer-top .header:hover, .footer-top .content a:hover{
-    color:#f08c01;
+    color:rgb(201, 201, 201);
 }
 .footer-top .icons i{
     color: #999;
@@ -23,7 +23,7 @@
     padding-right:4.5%;
 }
 .footer-top .icons i:hover{
-    color:#f08c01;
+    color:rgb(201, 201, 201);
     transition-duration: 400ms;
 }
 .footer-top .row:first-child{
@@ -40,7 +40,7 @@
     text-decoration: none;
     transition-duration: 400ms;
 }
-.footer-top .content .fa-phone,.footer-top .content .fa-envelope,.footer-top .content .fa-instagram{
+.footer-top .content .fa{
     font-size:20px;
     color: rgb(110, 110, 110);
     margin-left:-40px;
