@@ -84,13 +84,29 @@ class NavMenu extends Component {
                   Сумки на плече
                 </li>
               </Link>
+              <Link to='#'>
+                <li>
+                  Спорт. сумки
+                </li>
+              </Link>
               <Link to='#' >
-                <p style={{ marginTop: '20px' }}>БЕЙСБОЛКИ</p>
+                <p style={{ marginTop: '15px' }}>АКСЕСУАРИ</p>
               </Link>
               <Link to='#'>
-                <p style={{ marginTop: '15px' }}>ШКАРПЕТКИ</p>
+                <li>
+                  Бейсболки
+                </li>
               </Link>
-
+              <Link to='#'>
+                <li>
+                  Шкарпетки
+                </li>
+              </Link>
+              <Link to='#'>
+                <li>
+                  Окуляри
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="col-sm">
@@ -106,6 +122,11 @@ class NavMenu extends Component {
               <Link to='#'>
                 <li>
                   Кроссівки
+                </li>
+              </Link>
+              <Link to='#'>
+                <li>
+                  Черевики
                 </li>
               </Link>
               <Link to='#'>
@@ -229,6 +250,11 @@ class NavMenu extends Component {
                 <li>
                   Кроссівки
               </li>
+              </Link>
+              <Link to='#'>
+                <li>
+                  Черевики
+                </li>
               </Link>
               <Link to='#'>
                 <li>
