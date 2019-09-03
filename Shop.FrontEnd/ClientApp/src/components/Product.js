@@ -14,12 +14,10 @@ class Product extends Component {
                 <div style={{ textAlign: 'center' }}>
                     <div className='image-box'>
                         <Link to='#'>
-                            <span className='first-image'>
-                                <img src='https://gard.com.ua/image/cache/catalog/shop/products/ccc1c473-6cac-11e9-af82-9e1680149fdf-450x600.jpg' />
-                            </span>
-                             <span className='second-image'>
-                                <img src='https://gard.com.ua/image/cache/catalog/shop/products/ccc1c474-6cac-11e9-af82-9e1680149fdf-450x600.jpg'/>
-                            </span> 
+                        <img src={this.props.src_first}
+                             className='first-image' />
+                        <img src={this.props.src_second}
+                             className='second-image' />
                         </Link>
                     </div>
                     <div className='description'>
@@ -37,7 +35,7 @@ class Product extends Component {
                             <span>XXL</span>
                         </div>
                         <div>
-                            <button className='btn btn-dark'>Купити</button>
+                            <button className='btn btn-dark'>Замовити</button>
                         </div>
                     </div>
                 </div>

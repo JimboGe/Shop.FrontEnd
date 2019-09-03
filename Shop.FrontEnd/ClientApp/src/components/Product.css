@@ -1,13 +1,18 @@
-.product .image-box{
+.product{
+    margin:20px 0;
+}
+.product .description{
+    padding-top:15px;
+    background: white;
     position: relative;
+    z-index: 2;
+    height: 115px;
+    overflow: hidden;
+    transition-duration: 400ms;
 }
 .product .image-box img{
     width:100%;
-    margin-top:30px;
-}
-
-.product .description{
-    margin-top:15px;
+    z-index: 3;
 }
 .product .description a{
     text-decoration: none;
@@ -17,10 +22,10 @@
     color:rgb(119, 119, 119);
 }
 .product .description .price{
-    font-size:16px;
+    font-size:18px;
 }
 .product .description .size{
-    font-size:13px;
+    font-size:12px;
 }
 .product .description div{
     margin-top:5px;
@@ -35,8 +40,29 @@
     border-radius: 6px;
     background:white;
     transition-duration: 400ms;
+
 }
 .product button.btn.btn-dark:hover{
     background: black;
     color:white;
+}
+ .product .image-box .second-image{
+    position: relative;
+    top:0px;
+    left:0px;
+    padding-right:15px;
+    padding-left:15px;
+    width:100%;
+}
+.product .image-box .second-image{
+    position: absolute;
+    opacity:0; 
+    z-index: 1;
+}
+.product:hover .second-image{
+    opacity:1;
+}
+.product:hover .description{
+    height: 155px;
+    margin-top:-44px;
 }
