@@ -1,6 +1,59 @@
-.products{
+.list-products{
+    margin:40px;
+}
+.list-products .products{
     width:100%;
     height: 100%;
     overflow: hidden;
-    margin-bottom:40px;
+    margin-bottom:20px;
+}
+.list-products .filter, .list-products .filter-fixed{
+    float: right;
+    margin-top:20px;
+    width:200px;
+    border: 1px solid #dadada;
+    padding:10px;
+    position: relative;
+    background: white;
+}
+.list-products .filter-fixed{
+    position: fixed;
+    top:10px;
+    left:4.77%;
+    z-index: 10;
+}
+.list-products .filter .title, .list-products .filter-fixed .title{
+    font-size:17px;
+    font-weight: 700;
+    border-bottom: 1px solid #dadada;
+    margin-left:-40px;
+    padding-top: 7px;
+    padding-bottom: 15px;
+}
+.list-products ul{
+    list-style: none;
+}
+.list-products .filter ul a li.main, .list-products .filter-fixed ul a li.main{
+    font-size:16px;
+    margin-left:-40px;
+    padding-top: 15px;
+}
+.list-products .filter ul a li.main::after, .list-products .filter-fixed ul a li.main::after{
+    content:"\F106";
+    font: normal normal normal 14px/1 FontAwesome;
+    float: right;
+    font-size:20px;
+    padding-right:10px;
+}   
+.list-products .filter ul a:focus li.main::after, .list-products .filter-fixed ul a:focus li.main:after{
+    content:"\F107";
+}
+
+.list-products .filter ul a:not(:last-child) li.main, .list-products .filter-fixed ul a:not(:last-child) li.main{
+    border-bottom: 1px solid #dadada;
+    padding: 15px 0px;
+}
+.list-products .filter ul a, .list-products .filter-fixed ul a{
+    text-decoration: none;
+    color:black;
 }

@@ -6,7 +6,7 @@
     background: white;
     position: relative;
     z-index: 2;
-    height: 115px;
+    height: 95px;
     overflow: hidden;
     transition-duration: 400ms;
 }
@@ -63,6 +63,6 @@
     opacity:1;
 }
 .product:hover .description{
-    height: 155px;
+    height: 135px;
     margin-top:-44px;
 }
