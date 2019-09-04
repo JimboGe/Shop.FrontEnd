@@ -33,27 +33,60 @@
 .list-products ul{
     list-style: none;
 }
-.list-products .filter ul a li.main, .list-products .filter-fixed ul a li.main{
+.list-products .filter ul li.main>button{
+    border:none;
+    background: transparent;
+    width:100%;
+    text-align: left;
+}
+.list-products .filter ul li.main button{
+    outline: none;
+}
+.list-products .filter ul li.main, .list-products .filter-fixed ul  li.main{
     font-size:16px;
     margin-left:-40px;
     padding-top: 15px;
+    overflow: hidden;
 }
-.list-products .filter ul a li.main::after, .list-products .filter-fixed ul a li.main::after{
-    content:"\F106";
-    font: normal normal normal 14px/1 FontAwesome;
-    float: right;
-    font-size:20px;
-    padding-right:10px;
-}   
-.list-products .filter ul a:focus li.main::after, .list-products .filter-fixed ul a:focus li.main:after{
-    content:"\F107";
-}
-
-.list-products .filter ul a:not(:last-child) li.main, .list-products .filter-fixed ul a:not(:last-child) li.main{
+.list-products .filter ul li.main:not(:last-child),.list-products .filter-fixed ul li.main:not(:last-child){
     border-bottom: 1px solid #dadada;
     padding: 15px 0px;
 }
 .list-products .filter ul a, .list-products .filter-fixed ul a{
     text-decoration: none;
     color:black;
+}
+.list-products .filter ul li.main button span:after{
+    font: normal normal normal 14px/1 FontAwesome;
+    float: right;
+    font-size:20px;
+    padding-right:10px;
+}
+button.hide-filter span:after, button.hide-filter span.hide-filter:after{
+    content: "\F106";
+}
+button.show-filter span:after, button.show-filter span.show-filter:after{
+    content: "\F107";
+}
+.list-products .filter ul li.secondary{
+    font-size:15px;
+}  
+.list-products .filter ul li.secondary:first-child{
+    margin-top:10px;
+}
+.list-products .filter ul li.secondary input[type=checkbox]{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-left:-35px;
+    margin-right:10px;
+    margin-top:5px;
+}
+.list-products .filter ul li.main>ul{
+    overflow: hidden;
+    height: 0px;
+    transition-duration: 400ms;
+} 
+.list-products .filter ul li.main:hover>ul{
+    height: 100px;
 }

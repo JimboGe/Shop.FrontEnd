@@ -13,6 +13,7 @@
 .product .image-box img{
     width:100%;
     z-index: 3;
+    transition-duration: 500ms;
 }
 .product .description a{
     text-decoration: none;

@@ -11,15 +11,33 @@ class ListProducts extends Component {
     }
     componentDidMount() {
         window.addEventListener('scroll', this.scroll)
-      }
-    scroll=()=>{
-        let classNameFilter = 'filter';
-        let element = document.getElementById('filter');
-        if(window.pageYOffset >= 300){
-            element.setAttribute('class','filter-fixed')
+    }
+    scroll() {
+        ///NEED FIX!!!
+        try {                                                  
+            let classNameFilter = 'filter';
+            const element = document.getElementById('filter');
+            if (window.pageYOffset >= 300) {
+                element.setAttribute('class', 'filter-fixed')
+            }
+            else {
+                element.setAttribute('class', 'filter')
+            }
         }
-        else{
-            element.setAttribute('class','filter')
+        catch(ex){console.warn(ex)}
+         ///NEED FIX!!!
+    }
+    clickAnimation = (e) => {
+        const element = e.target;
+        const te = document.getElementById(e.target.id+'-menu');
+        if (element.getAttribute('class') == 'hide-filter') {
+            element.setAttribute('class', 'show-filter');
+            
+            te.setAttribute('class', 'visible');
+        }
+        else {
+            element.setAttribute('class', 'hide-filter');
+            te.setAttribute('class', 'hidden');
         }
     }
     render() {
@@ -32,42 +50,34 @@ class ListProducts extends Component {
                                 <li className='title'>
                                     МЕНЮ
                                 </li>
-                                <Link to='#'>
-                                    <li className='main'>
-                                        <span>СТАТЬ</span>
-                                       
-                                    </li>
-                                </Link>
-                                <Link to='#'>
-                                    <li className='main'>
-                                        <span>КАТЕГОРІЯ</span>
-                                       
-                                    </li>
-                                </Link>
-                                <Link to='#'>
-                                    <li className='main'>
-                                        <span>БРЕНД</span>
-                                       
-                                    </li>
-                                </Link>
-                                <Link to='#'>
-                                    <li className='main'>
-                                        <span>КОЛІР</span>
-                                        
-                                    </li>
-                                </Link>
-                                <Link to='#'>
-                                    <li className='main'>
-                                        <span> РОЗМІР</span>
-                                        
-                                    </li>
-                                </Link>
-                                <Link to='#'>
-                                    <li className='main'>
-                                        <span> ЦІНА</span>
-                                        
-                                    </li>
-                                </Link>
+                                <li className='main'>
+                                    <button className='hide-filter' id='gender' onClick={(e) => this.clickAnimation(e)}><span>СТАТЬ</span></button>
+                                    <ul className='visible' id='gender-menu'>
+                                        <li className='secondary'>
+                                            <input type='checkbox' id='man'/>
+                                            <span>Чоловіча</span>
+                                        </li>
+                                        <li className='secondary'>
+                                            <input type='checkbox' id='woman'/>
+                                            <span>Жіноча</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li className='main'>
+                                    <button className='hide-filter' id='category' onClick={(e) => this.clickAnimation(e)}><span id='category'>КАТЕГОРІЯ</span></button>
+                                </li>
+                                <li className='main'>
+                                    <button className='hide-filter' id='brand' onClick={(e) => this.clickAnimation(e)}><span>БРЕНД</span></button>
+                                </li>
+                                <li className='main'>
+                                    <button className='hide-filter' id='color' onClick={(e) => this.clickAnimation(e)}><span>КОЛІР</span></button>
+                                </li>
+                                <li className='main'>
+                                    <button className='hide-filter' id='size' onClick={(e) => this.clickAnimation(e)}><span>РОЗМІР</span></button>
+                                </li>
+                                <li className='main'>
+                                    <button className='hide-filter' id='price' onClick={(e) => this.clickAnimation(e)}><span>ЦІНА</span></button>
+                                </li>
                             </ul>
                         </div>
                     </Col>
