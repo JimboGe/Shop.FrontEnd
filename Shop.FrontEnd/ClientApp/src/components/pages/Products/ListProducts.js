@@ -18,7 +18,7 @@ class ListProducts extends Component {
             let classNameFilter = 'filter';
             const element = document.getElementById('filter');
             if (window.pageYOffset >= 300) {
-                element.setAttribute('class', 'filter-fixed')
+                element.setAttribute('class', 'filter fixed')
             }
             else {
                 element.setAttribute('class', 'filter')

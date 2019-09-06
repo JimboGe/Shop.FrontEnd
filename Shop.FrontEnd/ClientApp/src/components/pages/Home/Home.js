@@ -58,6 +58,7 @@ class Home extends Component {
               <Link to='/cart'><img src='/img/home/shoes.jpg' /></Link>
             </div>
           </div>
+         
         </div>
       </div>
     );

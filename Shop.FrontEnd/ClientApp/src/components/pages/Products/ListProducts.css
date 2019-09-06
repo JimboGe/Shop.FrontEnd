@@ -7,7 +7,7 @@
     overflow: hidden;
     margin-bottom:20px;
 }
-.list-products .filter, .list-products .filter-fixed{
+.list-products .filter{
     float: right;
     margin-top:20px;
     width:200px;
@@ -16,13 +16,13 @@
     position: relative;
     background: white;
 }
-.list-products .filter-fixed{
+.list-products .filter.fixed{
     position: fixed;
     top:10px;
     left:4.77%;
     z-index: 10;
 }
-.list-products .filter .title, .list-products .filter-fixed .title{
+.list-products .filter .title{
     font-size:17px;
     font-weight: 700;
     border-bottom: 1px solid #dadada;
@@ -42,17 +42,17 @@
 .list-products .filter ul li.main button{
     outline: none;
 }
-.list-products .filter ul li.main, .list-products .filter-fixed ul  li.main{
+.list-products .filter ul li.main{
     font-size:16px;
     margin-left:-40px;
     padding-top: 15px;
     overflow: hidden;
 }
-.list-products .filter ul li.main:not(:last-child),.list-products .filter-fixed ul li.main:not(:last-child){
+.list-products .filter ul li.main:not(:last-child){
     border-bottom: 1px solid #dadada;
     padding: 15px 0px;
 }
-.list-products .filter ul a, .list-products .filter-fixed ul a{
+.list-products .filter ul a{
     text-decoration: none;
     color:black;
 }
