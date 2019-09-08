@@ -8,22 +8,15 @@
     overflow: hidden;
     margin-bottom: 20px;
 }
-
 .list-products .filter {
-    float: right;
+    
     margin-top: 20px;
     width: 200px;
     border: 1px solid #dadada;
     padding: 10px;
     position: relative;
     background: white;
-}
-
-.list-products .filter.fixed {
-    position: fixed;
-    top: 10px;
-    left: 4.77%;
-    z-index: 10;
+    
 }
 
 .list-products .filter .title {
@@ -44,9 +37,6 @@
     background: transparent;
     width: 100%;
     text-align: left;
-}
-
-.list-products .filter ul li.main button {
     outline: none;
 }
 
@@ -82,6 +72,12 @@ button.show-filter span:after, button.show-filter span.show-filter:after {
     content: "\F107";
 }
 
+.hidden{
+    max-height: 0;
+    transition-duration: 400ms;
+    visibility: visible;
+}
+
 .list-products .filter ul li.secondary {
     font-size: 15px;
 }
@@ -89,21 +85,41 @@ button.show-filter span:after, button.show-filter span.show-filter:after {
 .list-products .filter ul li.secondary:first-child {
     margin-top: 10px;
 }
-
-.list-products .filter ul li.secondary input:focus, .list-products .filter ul li.secondary input:active,
-.list-products .filter ul li.secondary input:hover{
+.list-products  input:focus, .list-products  input:active,
+.list-products  input:hover{
     border:1px solid black;
 }
-.list-products .filter ul li.secondary input {
+.list-products .filter ul li.secondary input[type='checkbox'] {
+    appearance: none;
     height: 25px;
     width: 25px;
     cursor: pointer;
     margin-left: -35px;
     margin-right: 10px;
     margin-top: 5px;
-    appearance: none;
-    outline: none;
     border:1px solid gray;
+    outline: none;    
+    
+}
+.list-products .filter ul li.secondary input[type='checkbox']:hover,
+.list-products .filter ul li.secondary input[type='checkbox']:focus,
+.list-products .filter ul li.secondary input[type='checkbox']:active,
+.list-products .filter ul li.secondary input[type='checkbox']:checked{
+    border:1px solid black;
+}
+.list-products .filter ul li.secondary span{
+    position: absolute;
+    margin-top:7px;
+}
+
+
+.list-products .filter ul li.secondary input[type='checkbox']:checked:after{
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size:20px;
+    margin-top:2px;
+    position: absolute;
+    left:18px;
 }
 #color-menu li.secondary:nth-child(1) input, #color-menu li.secondary:nth-child(4) input{
     margin-left:-20px;
@@ -118,28 +134,29 @@ button.show-filter span:after, button.show-filter span.show-filter:after {
     background: transparent;
     background-color:transparent;
 }
-.list-products .filter ul li.main>ul {
+.list-products .filter ul li.main>ul{
     overflow: hidden;
     transition-duration: 400ms;
     max-height: 0px;
 }
-.list-products .filter ul li.main:hover:nth-child(2)>ul {
+
+.list-products .filter ul li.main:nth-child(2)>ul {
     max-height: 100px;
     transition-duration: 550ms;
 }
-.list-products .filter ul li.main:hover:nth-child(3)>ul {
+.list-products .filter ul li.main:nth-child(3)>ul {
     max-height: 140px;
     transition-duration: 550ms;
 }
-.list-products .filter ul li.main:hover:nth-child(4)>ul {
-    max-height: 250px;
+.list-products .filter ul li.main:nth-child(4)>ul {
+    max-height: 500px;
     transition-duration: 550ms;
 }
-.list-products .filter ul li.main:hover:nth-child(5)>ul {
+.list-products .filter ul li.main:nth-child(5)>ul {
     max-height: 150px;
     transition-duration: 550ms;
 }
-.list-products .filter ul li.main:hover:nth-child(6)>ul {
+.list-products .filter ul li.main:nth-child(6)>ul {
     max-height: 500px;
     transition-duration: 550ms;
 }
@@ -147,6 +164,9 @@ button.show-filter span:after, button.show-filter span.show-filter:after {
 #size-menu .row{
   margin-top:15px;
   margin-bottom:15px;
+}
+#size-menu li.secondary span{
+    position: relative;
 }
 #size-menu li.secondary {
    border:1px solid gray;
@@ -164,40 +184,52 @@ button.show-filter span:after, button.show-filter span.show-filter:after {
 #size-menu .col-lg-4{
     padding:2px;
 }
-.price-menu{
-    
+#price-menu{
     text-align: center;
 }
-.price-menu input[type='text']{
+#price-menu input[type='text']{
     width:41%;
     margin-left:3px;
     margin-top:25px;
     font-size:14px;
-    text-align: center;
+    padding-left:35px;
+    outline: none;
 }
-.price-menu input[type='text']:last-child{
+#price-menu input[type='text']:active, #price-menu input[type='text']:focus{
+    border:1px solid black;
+}
+#price-menu>span{
+    position: absolute;
+    margin-top:28px;
+    margin-left:-70px;
+    font-size:14px;
+}
+#price-menu input[type='text']:last-child{
     margin-left:15px;
+}
+#price-menu a i{
+    margin-left:5px;
+    font-size:17px;
 }
 
 div.input-range{
     width:80%;
     margin-left:15px;
     margin-top:15px;
-   
 }
 div.input-range__track--active{
     background:black;
 }
 
 div.input-range__slider{
-    height: 18px;
-    width:18px;
-    margin-top:-1.4rem;
+    height: 15px;
+    width:15px;
+    margin-top:-0.9rem;
     background:black;
     border: 1px solid black;
 }
 div.input-range__track{
-    height: 8px;
+    height: 4px;
     top:0;
 }
 span.input-range__label-container{
