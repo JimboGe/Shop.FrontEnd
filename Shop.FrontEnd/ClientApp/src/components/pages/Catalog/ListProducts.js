@@ -17,10 +17,6 @@ class ListProducts extends Component {
             targetElemId: ''
         };
     }
-    componentDidMount() {
-        window.addEventListener('scroll', this.scroll);
-        
-    }
     createSizeTable(value, index) {
         return (
             <Col lg={4}>

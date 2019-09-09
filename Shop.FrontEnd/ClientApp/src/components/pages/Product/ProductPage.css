@@ -1,0 +1,44 @@
+.product-page{
+    margin:55px 0px;
+}
+/* -----DOT----- */
+.product-page .dot-group{
+    text-align: center;
+}
+button.dot___3c3SI.carousel__dot {
+    border:2px solid rgb(44, 44, 44);
+    border-radius: 50%;
+    height: 15px;
+    width:15px;
+    margin-left:7px;
+    outline: none;
+    background: rgb(230, 230, 230);
+}
+button.dot___3c3SI.carousel__dot.carousel__dot--selected{
+    background: rgb(44, 44, 44);
+}
+button.dot___3c3SI.carousel__dot:hover{
+    background: rgb(145, 145, 145);
+}
+/* ----/DOT----- */
+button.button-move{
+    position: absolute;
+    top:45%;
+    font-family: FontAwesome;
+    font-size:20px;
+    background: rgb(243, 243, 243);
+    outline: none;
+    border:none;
+}
+button.button-move.back{
+    left:0;
+}
+button.button-move.next{
+    right:0;
+}
+button.button-move.back:after{
+    content: '\f053';
+}
+button.button-move.next:after{
+    content: '\f054';
+}
