@@ -1,23 +1,14 @@
-.carousel.big button.left , .carousel.big button.right{
-    height: 420px;
-    background:transparent;
-    width:400px;
-    border:0px;
+.carousel {
+    text-align: center;
 }
-.carousel button.left:active,.carousel button.left:focus,
-.carousel button.right:focus, .carousel button.right:active{
-    outline: 0px;
-}
-.carousel img{
-    width:100%;
-}
+
 .item img{
     width:100%;
     padding:0px;
     transition-duration: 400ms;
 }
 .item img:hover{
-    padding:5px;
+    transform: scale(1.009);
 }
 .item{
     padding:10px 10px 10px 10px;
@@ -25,7 +16,6 @@
 }
 .grid {
     display: grid;
-    grid-template: 0.5fr 0.5fr 0.5fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "a a a a a a a a"
         "b b c c d d g g"
