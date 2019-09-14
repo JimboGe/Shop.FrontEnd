@@ -1,3 +1,28 @@
+@keyframes show{
+    from {
+        max-height: 0px;
+      }
+      to {
+        max-height: 1000px;
+      }
+}
+@-moz-keyframes show {
+    from {
+        max-height: 0px;
+      }
+      to {
+        max-height: 1000px;
+      }
+  }
+  @-webkit-keyframes show {
+    from {
+        max-height: 0px;
+      }
+      to {
+        max-height: 1000px;
+      }
+  }
+
 .product-page{
     margin:55px 0px;
 }
@@ -15,7 +40,7 @@ button.dot___3c3SI.carousel__dot {
     width:15px;
     margin-left:7px;
     outline: none;
-    background: rgb(230, 230, 230);
+    background: rgb(255, 255, 255);
 }
 button.dot___3c3SI.carousel__dot.carousel__dot--selected{
     background: rgb(44, 44, 44);
@@ -28,7 +53,6 @@ div.dot-group-image{
     width:60px;
     left:-130px;
     top:0;
-    
 }
 button.dot___3c3SI.carousel__dot.dot-image{
     width:120px;
@@ -50,6 +74,10 @@ button.button-move{
     background: #f1f1f1;
     outline: none;
     border:none;
+    transition: color 0.4s;
+}
+button.button-move.back:hover, button.button-move.next:hover{
+    color:rgb(109, 109, 109);
 }
 button.button-move.back{
     left:0;
@@ -77,6 +105,13 @@ button.button-move.next:after{
     margin-left:15px;
     font-size:15px;
 }
+.product-page div#size-grid-div{
+    overflow: hidden;
+    animation: .6s alternate show;
+    -moz-animation: .6s alternate show;
+    -webkit-animation: .6s alternate show;
+}
+
 .product-page .size-grid button{
     outline: none;
     background:transparent;
@@ -88,14 +123,21 @@ button.button-move.next:after{
     margin:10px 0px;
     transition-duration: 400ms;
 }
+.product-page .size-grid button:after{
+    content: "\f078";
+    font-family: FontAwesome;
+    margin-left:5px;
+    position: absolute;
+    margin-top:-2px;
+}
+.product-page .size-grid button[active='active']:after{
+    content: "\f077";
+    font-family: FontAwesome;
+}
 .product-page .size-grid button:hover{
     color:black;
 }
-.product-page .size-grid button i {
-    margin-left:5px;
-    position: absolute;
-    margin-top:1px;
-}
+
 .product-page .size{
     margin-bottom:15px;
 }
@@ -139,12 +181,14 @@ button.button-move.next:after{
     outline: none;
     box-shadow: none;
     color:rgb(151, 151, 151);
+    text-shadow: none;
+    transition:background-color 0.4s;
 }
 .product-page .counter .button-number button:first-child{
    border-right:none;
    border-top-right-radius: 0;
    border-bottom-right-radius: 0;
-  
+   
 }
 .product-page .counter .button-number button:last-child{
     border-left:none;
@@ -160,6 +204,10 @@ button.button-move.next:after{
     height: 39px;
     text-align: center;
 }
+.product-page .counter .button-number button.btn.btn-default:hover{
+    background: black;
+    color:white;
+}
 .counter button.order-btn{
     margin-left:-65px;
     width:115%;
@@ -172,11 +220,7 @@ button.button-move.next:after{
     text-shadow: none;
     outline: none;
 }
-.product-page .counter>button:hover,
-.product-page .counter>button:focus{
-    background: black;
-    color:white;
-}
+
 .product-page .description p{
     margin-top:-7px;
     color:#999999;
@@ -225,6 +269,12 @@ button.button-move.next:after{
 .product-page .add-review i:hover{
     color:black;
 }
+.product-page #new-review{
+    overflow: hidden;
+    animation: .6s alternate show;
+    -moz-animation: .6s alternate show;
+    -webkit-animation: .6s alternate show;
+}
 .product-page #new-review button.btn.btn-default{
     border:1px solid black;
     background: transparent;
@@ -241,28 +291,23 @@ button.button-move.next:after{
     color:white;
     outline: none;
     box-shadow: none;
+    text-shadow: none;
 }
 .product-page .modal{
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    position: fixed; 
+    z-index: 10;
+    padding: 25px 30% 25px 30%; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(83, 83, 83, 0.61);  
 }
-.product-page .zoom-img{
-    margin: auto;
-    display: block;
-    width:35%;
-    height: 80%;
-    transform:scale(1.5);
-    background-size:cover;
-}
-
+.product-page .modal .carousel{
+      width:100%;
+      height: 100%;
+  }
 .product-page .close-modal{
     background: transparent;
     font-size:25px;
@@ -271,6 +316,34 @@ button.button-move.next:after{
     outline: none;
     box-shadow: none;
     position: absolute;
-    top:50px;
-    right:150px;
+    top:0px;
+    right:-50px;
 }
+.product-page .modal button{
+    background: transparent;
+    border:none;
+    color:white;
+    font-size:25px;
+    position: absolute;
+    box-shadow: none;
+    outline: none;
+    transition: color .4s;
+}
+.product-page .modal button:hover{
+    color:black;
+}
+.product-page .modal .button-move.back{
+    top:50%;
+    left:-50px;
+}
+.product-page .modal .button-move.next{
+    top:50%;
+    right:-50px;
+}
+.product-page .modal div.carousel__dot-group.dot-group{
+    visibility: hidden;
+}
+.product-page .modal div.dot-group-image{
+    visibility: hidden;
+}
+
